@@ -1,0 +1,112 @@
+{
+  "events": [
+    {
+      "title": "Concert in the Park",
+      "description": "Enjoy an evening of classical music in the park.",
+      "date": "2024-07-01T19:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Central Park",
+      "tickets": {
+        "total": 200,
+        "available": 150,
+        "price": 30
+      }
+    },
+    {
+      "title": "Tech Conference 2024",
+      "description": "A conference showcasing the latest in technology.",
+      "date": "2024-09-15T09:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Tech Convention Center",
+      "tickets": {
+        "total": 500,
+        "available": 200,
+        "price": 250
+      }
+    },
+    {
+      "title": "Art Exhibition Opening",
+      "description": "Opening night of the annual art exhibition.",
+      "date": "2024-06-20T18:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "City Art Gallery",
+      "tickets": {
+        "total": 100,
+        "available": 80,
+        "price": 15
+      }
+    },
+    {
+      "title": "Food Festival",
+      "description": "A weekend of food, fun, and festivities.",
+      "date": "2024-08-10T12:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Downtown Square",
+      "tickets": {
+        "total": "200",
+        "available": 100,
+        "price": 5
+      }
+    },
+    {
+      "title": "Charity Run",
+      "description": "Annual charity run to support local hospitals.",
+      "date": "2024-09-01T07:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Riverfront Park",
+      "tickets": {
+        "total": "350",
+        "available": "200",
+        "price": 20
+      }
+    },
+    {
+      "title": "Jazz Night",
+      "description": "An evening of smooth jazz performances.",
+      "date": "2024-06-25T20:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Jazz Club",
+      "tickets": {
+        "total": 150,
+        "available": 50,
+        "price": 40
+      }
+    },
+    {
+      "title": "Book Fair",
+      "description": "A gathering for book lovers with stalls and author signings.",
+      "date": "2024-07-15T10:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "City Library",
+      "tickets": {
+        "total": 250,
+        "available": 180,
+        "price": 0
+      }
+    },
+    {
+      "title": "Outdoor Movie Night",
+      "description": "Watch classic movies under the stars.",
+      "date": "2024-08-05T21:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Community Park",
+      "tickets": {
+        "total": 100,
+        "available": 60,
+        "price": 8
+      }
+    },
+    {
+      "title": "Comedy Show",
+      "description": "A night of laughter with top comedians.",
+      "date": "2024-07-22T19:00:00.000Z",
+      "image": "https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg",
+      "location": "Comedy Club",
+      "tickets": {
+        "total": 200,
+        "available": 120,
+        "price": 25
+      }
+    }
+  ]
+}
