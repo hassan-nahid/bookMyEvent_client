@@ -17,23 +17,23 @@ const EventDetails = () => {
             tickets: tickets,
             totalPrice: event.tickets.price * tickets,
             createdAt: new Date(),
-          };
+        };
 
-          const response = await fetch('http://localhost:5000/booking', {
+        const response = await fetch('http://localhost:5000/booking', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              'authorization': `Bearer ${localStorage.getItem('token')}`
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify(booking),
-          });
-          const data = await response.json();
-          if (data.acknowledged) {
+        });
+        const data = await response.json();
+        if (data.acknowledged) {
             toast.success('Tickets booked successfully!');
-          }
+        }
 
     }
-    
+
 
     return (
         <div className="container mx-auto p-4">
@@ -63,9 +63,13 @@ const EventDetails = () => {
                                 className="input input-bordered w-20 text-center border-2 border-blue-500 rounded-lg"
                             />
                         </div>
-                        <button onClick={handleBooking} className="btn btn-primary text-lg font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300">
-                            Book Tickets (${event?.tickets?.price * tickets})
-                        </button>
+                        {
+                            event?.tickets?.available <= 1 ? <button disabled onClick={handleBooking} className="btn btn-primary text-lg font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300">
+                                Book Tickets (${event?.tickets?.price * tickets})
+                            </button> : <button onClick={handleBooking} className="btn btn-primary text-lg font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300">
+                                Book Tickets (${event?.tickets?.price * tickets})
+                            </button>
+                        }
                     </div>
                 </div>
             </div>

@@ -14,6 +14,9 @@ import EventManage from "../pages/AdminPage/EventManage";
 import ManageUser from "../pages/AdminPage/ManageUser";
 import EditEvent from "../pages/AdminPage/EditEvent";
 import BookingTickets from "../components/Home/BookingTickets";
+import MyTicket from "../components/Home/MyTickets";
+import Success from "../components/Action/Success";
+import Cancel from "../components/Action/Cancel";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +50,10 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><EventManage /></PrivateRoute>,
       },
       {
+        path: "/my_tickets",
+        element: <PrivateRoute><MyTicket /></PrivateRoute>,
+      },
+      {
         path: "/edit_event/:id",
         element: <PrivateRoute><EditEvent /></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/events/${params?.id}`),
@@ -68,5 +75,13 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/success",
+    element: <Success />,
+  },
+  {
+    path: "/cancel",
+    element: <Cancel />,
   },
 ]);

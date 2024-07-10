@@ -40,11 +40,12 @@ const DashboardLayout = () => {
                         <div className="divider h-2 bg-black"/>
                         <li><Link className="text-blue-400 font-semibold" to={"/"}><FaHome />Home</Link></li>
                         <li><Link className="text-blue-400 font-semibold" to={"/booking_tickets"}><FaHome />Booking Tickets</Link></li>
+                        <li><Link className="text-blue-400 font-semibold" to={"/my_tickets"}><FaHome />My Tickets</Link></li>
                         {
                             isAdmin ? <li><Link className="text-blue-400 font-semibold" to={"/add_event"}><MdOutlinePostAdd />Add Event</Link></li> : ""
                         }
                         {
-                            isAdmin ? <li><Link className="text-blue-400 font-semibold" to={"/manage_event"}><MdOutlineManageSearch />Manage Event</Link></li> : ""
+                            isAdmin ? <li><Link className="text-blue-400 font-semibold" to={"/event_manage"}><MdOutlineManageSearch />Manage Event</Link></li> : ""
                         }
                         {
                             isAdmin ? <li><Link className="text-blue-400 font-semibold" to={"/manage_user"}><FaUserCog />Manage User</Link></li> : ""
@@ -53,10 +54,10 @@ const DashboardLayout = () => {
                     <div className="flex gap-1">
                         {user && user.photoURL === null ?
                             <Link to="/profile_page" className="w-12">
-                                <img title={user?.email} className="rounded-full" src={"https://i.ibb.co/kg6fMYC/placeholder.jpg"} />
+                                <img title={user?.email} className="rounded-full w-12 h-12" src={"https://i.ibb.co/kg6fMYC/placeholder.jpg"} />
                             </Link> :
                             <Link to="/profile_page" className="w-12">
-                                <img title={user?.email} className="rounded-full" src={user?.photoURL} />
+                                <img title={user?.email} className="rounded-full w-12 h-12" src={user?.photoURL} />
                             </Link>}
                         {user ? <button onClick={handleLogout} className="btn bg-red-500 w-[80%] hover:bg-red-400 text-white font-semibold">Logout<FiLogOut/> </button> :
                             <Link to="/login" className="btn bg-blue-400 hover:bg-blue-500 text-white font-semibold">Login</Link>}

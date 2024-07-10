@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const EventManageRow = ({ event, index, onDelete }) => {
-    console.log(event)
+    
     return (
         <tr>
             <th>{index + 1}</th>

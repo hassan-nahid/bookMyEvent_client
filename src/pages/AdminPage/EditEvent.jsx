@@ -8,12 +8,12 @@ const MySwal = withReactContent(Swal);
 const EditEvent = () => {
     const loadedEvent = useLoaderData();
     const [event, setEvent] = useState(loadedEvent);
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token");
 
     useEffect(() => {
         setEvent(loadedEvent);
     }, [loadedEvent]);
-    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         if (name.includes("tickets")) {
@@ -22,7 +22,7 @@ const EditEvent = () => {
                 ...prevState,
                 tickets: {
                     ...prevState.tickets,
-                    [ticketField]: value
+                    [ticketField]: ticketField === "price" ? parseFloat(value) : parseInt(value)
                 }
             }));
         } else {

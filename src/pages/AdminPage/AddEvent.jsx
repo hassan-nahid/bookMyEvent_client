@@ -4,9 +4,7 @@ import withReactContent from 'sweetalert2-react-content';
 
 const MySwal = withReactContent(Swal);
 
-
 const AddEvent = () => {
-
     const [event, setEvent] = useState({
         title: "",
         description: "",
@@ -28,7 +26,7 @@ const AddEvent = () => {
                 ...prevState,
                 tickets: {
                     ...prevState.tickets,
-                    [ticketField]: value
+                    [ticketField]: ticketField === "price" ? parseFloat(value) : parseInt(value)
                 }
             }));
         } else {
